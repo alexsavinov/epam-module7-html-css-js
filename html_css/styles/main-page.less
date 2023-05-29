@@ -1,0 +1,102 @@
+@import "common/colors";
+
+main {
+  justify-content: start;
+  flex-direction: column;
+}
+
+.categories-wrapper {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @color_bg4;
+  gap: 60px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.category-image {
+  height: 55px;
+  width: 55px;
+  background-color: @color_bg2;
+}
+
+.category-name {
+  font-size: 15px;
+}
+
+.items-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+.item-image {
+  height: 170px;
+  width: 190px;
+  background-color: @color_bg4;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px 0px 5px;
+  background-color: @color_bg2;
+}
+
+.item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 0px 8px;
+}
+
+.material-icons {
+  font-size: 14px;
+}
+
+.item-brief {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 8px;
+}
+
+.item-brief-text {
+  font-size: 10px;
+}
+
+.item-brief-expires {
+  font-size: 8px;
+  color: @color_font;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid @color_bg;
+  padding: 5px 8px 0px;
+}
+
+.item-details-price {
+  font-size: 15px;
+}
+
+.item-details-button {
+  font-size: 10px;
+  padding: 3px 16px;
+  background-color: @color_bg2;
+  border: 1px solid @color_bg3;
+}

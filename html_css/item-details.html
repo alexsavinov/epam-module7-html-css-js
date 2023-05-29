@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Register page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="styles/common/styles.less"/>
+  <link rel="stylesheet/less" type="text/css" href="styles/item-details.less"/>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-btn-wrapper">
+    <ul class="nav-btn-lines">
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+    </ul>
+    Logo
+  </div>
+
+  <div class="search-wrapper">
+    <form>
+      <input class="search-input" type="search" name="search" placeholder="Search by item name"/>
+      <button class="search-button" type="submit">
+        <b>All Categories</b>
+        <span class="material-symbols-outlined">expand_more</span>
+      </button>
+    </form>
+  </div>
+
+  <div class="nav-wrapper">
+    <span class="nav-btn material-icons">favorite</span>
+    <span class="nav-btn material-icons">shopping_cart</span>
+    <div class="nav-buttons">
+      <button class="nav-btn nav-btn-login">Login</button>
+      <div class="vertical-divider-wrapper">
+        <div class="vertical-divider"></div>
+      </div>
+      <button class="nav-btn nav-btn-signup">Sign Up</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="item-wrapper">
+
+    <div class="item-column-left">
+      <div class="item-image"></div>
+
+      <div class="item-detailed-desc">
+        <div class="item-detailed-desc-title">Item Detailed Description</div>
+        <div class="item-detailed-desc-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, corporis cupiditate deleniti eveniet
+          fugit harum, hic itaque nobis nulla odio qui quos rem, repellat similique sit. Aliquid consectetur dicta
+          dolore temporibus. At, libero, repellendus? Consequuntur dolorem explicabo quibusdam! Aliquid architecto
+          consequuntur est laudantium magni, odit quasi sint ullam. Aliquam, debitis dolorum enim expedita fugit iure
+          nihil quo ratione reiciendis reprehenderit.
+        </div>
+      </div>
+    </div>
+
+    <div class="item-column-right">
+      <div class="item-short-desc">
+        <div class="item-short-desc-title">Coupon name</div>
+        <div class="item-short-desc-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet nesciunt quibusdam reiciendis. A
+          cumque distinctio eos illum iure maxime, quia? Accusamus ad amet blanditiis illum labore mollitia voluptates.
+        </div>
+        <div class="item-short-desc-time-left">
+          <div class="item-short-desc-time-left-title">Time Left to Buy</div>
+          <div class="item-short-desc-time-left-text">12 days 14 hours</div>
+        </div>
+        <div class="item-short-desc-footer">
+          <div class="item-short-desc-price">$235</div>
+          <button class="item-short-desc-button">
+            Add to Cart
+            <span class="material-icons">shopping_cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Copyright 2023. All rights reversed.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import "common/colors";
+
+main {
+  align-items: start;
+  padding: 40px;
+}
+
+.item-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.item-column-left {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.item-image {
+  height: 300px;
+  background-color: @color_bg4;
+}
+
+.item-detailed-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-detailed-desc-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-column-right {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: @color_bg2;
+}
+
+.item-short-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.item-short-desc-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-short-desc-text {
+  height: 120px;
+  font-size: 14px;
+}
+
+.item-short-desc-time-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.item-short-desc-time-left-title {
+  font-size: 11px;
+  color: @color_font;
+}
+
+.item-short-desc-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.item-short-desc-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-short-desc-button {
+  width: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0px;
+  padding: 0px;
+  background-color: @color_bg2;
+  color: @color_link;
+  font-weight: bold;
+
+  &:hover {
+    background-color: @color_bg;
+  }
+
+}

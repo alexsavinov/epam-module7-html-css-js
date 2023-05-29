@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Register page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="styles/common/styles.less"/>
+  <link rel="stylesheet/less" type="text/css" href="styles/register.less"/>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-btn-wrapper">
+    <ul class="nav-btn-lines">
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+    </ul>
+    Logo
+  </div>
+
+  <div class="search-wrapper">
+    <form>
+      <input class="search-input" type="search" name="search" placeholder="Search by item name"/>
+      <button class="search-button" type="submit">
+        <b>All Categories</b>
+        <span class="material-symbols-outlined">expand_more</span>
+      </button>
+    </form>
+  </div>
+
+  <div class="nav-wrapper">
+    <span class="nav-btn material-icons">favorite</span>
+    <span class="nav-btn material-icons">shopping_cart</span>
+    <div class="nav-buttons">
+      <button class="nav-btn nav-btn-login">Login</button>
+      <div class="vertical-divider-wrapper">
+        <div class="vertical-divider"></div>
+      </div>
+      <button class="nav-btn nav-btn-signup">Sign Up</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="register-wrapper">
+    <div class="header-register">Register</div>
+
+    <form class="form-register-wrapper">
+
+      <div class="form-column">
+        <label for="username" class="form-label">Login Name
+          <input class="input-register" type="text" id="username" name="username"/>
+        </label>
+        <label for="password" class="form-label">Password
+          <input class="input-register" type="text" id="password" name="password"/>
+        </label>
+        <label for="email" class="form-label">Email
+          <input class="input-register" type="text" id="email" name="email"/>
+        </label>
+      </div>
+
+      <div class="form-column">
+        <label for="firstname" class="form-label">First Name
+          <input class="input-register" type="text" id="firstname" name="firstname"/>
+        </label>
+        <label for="password-confirm" class="form-label">Repeat password
+          <input class="input-register" type="text" id="password-confirm" name="password-confirm"/>
+        </label>
+        <label for="address" class="form-label">Address
+          <input class="input-register" type="text" id="address" name="address"/>
+        </label>
+        <div class="form-buttons">
+          <button class="button-cancel buttons-register" type="submit">Cancel</button>
+          <button class="button-register buttons-register" type="submit">Sign Up</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Copyright 2023. All rights reversed.</p>
+</footer>
+
+</body>
+</html>

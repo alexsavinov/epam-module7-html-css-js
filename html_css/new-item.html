@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Register page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="styles/common/styles.less"/>
+  <link rel="stylesheet/less" type="text/css" href="styles/new-item.less"/>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-btn-wrapper">
+    <ul class="nav-btn-lines">
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+    </ul>
+    Logo
+  </div>
+
+  <div class="search-wrapper">
+    <form>
+      <input class="search-input" type="search" name="search" placeholder="Search by item name"/>
+      <button class="search-button" type="submit">
+        <b>All Categories</b>
+        <span class="material-symbols-outlined">expand_more</span>
+      </button>
+    </form>
+  </div>
+
+  <div class="nav-wrapper">
+    <span class="nav-btn material-icons">favorite</span>
+    <span class="nav-btn material-icons">shopping_cart</span>
+    <div class="nav-buttons">
+      <button class="nav-btn nav-btn-login">Login</button>
+      <div class="vertical-divider-wrapper">
+        <div class="vertical-divider"></div>
+      </div>
+      <button class="nav-btn nav-btn-signup">Sign Up</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="title">
+    <div class="title-text">Add New Coupon</div>
+  </div>
+
+  <div class="item-wrapper">
+
+    <form class="form-item-wrapper">
+
+      <div class="form-column">
+        <label for="company" class="form-label">Company
+          <input class="input-item" type="text" id="company" name="company"/>
+        </label>
+        <label for="category" class="form-label">Category
+          <input class="input-item" list="categories" id="category" name="category"/>
+          <datalist id="categories">
+            <option value="category1">
+            <option value="category2">
+            <option value="category3">
+          </datalist>
+        </label>
+        <label for="valid" class="form-label">Valid
+          <input class="input-item" type="datetime-local" id="valid" name="valid"/>
+        </label>
+        <label for="price" class="form-label">Price
+          <input class="input-item" type="number" id="price" name="price"/>
+        </label>
+        <label for="images" class="form-label">Images
+          <input class="input-images input-item" type="text" id="images" name="images"/>
+        </label>
+      </div>
+
+      <div class="form-column">
+        <label for="item-name" class="form-label">Item name
+          <input class="input-item" type="text" id="item-name" name="item-name"/>
+        </label>
+        <label for="short-desc" class="form-label">Short description
+          <input class="input-item" type="text" id="short-desc" name="short-desc"/>
+        </label>
+        <label for="long-desc" class="form-label">Long description
+          <input class="input-item" type="text" id="long-desc" name="long-desc"/>
+        </label>
+        <div class="form-buttons">
+          <button class="button-cancel buttons-item" type="submit">Back</button>
+          <button class="button-save buttons-item" type="submit">Save</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Copyright 2023. All rights reversed.</p>
+</footer>
+
+</body>
+</html>

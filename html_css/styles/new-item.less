@@ -1,0 +1,88 @@
+@import "common/colors";
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: @color_bg2;
+}
+
+.title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @color_bg3;
+}
+
+.title-text {
+  width: 690px;
+  color: @color_bg2;
+  font-size: 18px;
+}
+
+.form-item-wrapper {
+  padding: 15px 20px;
+  display: flex;
+  gap: 80px;
+}
+
+.item-wrapper {
+  display: flex;
+}
+
+.item-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  color: @color_font;
+}
+
+.input-item {
+  height: 33px;
+  width: 300px;
+  border: 1px solid @color_border2;
+}
+
+.input-images {
+  background: @color_bg2 url('https://static.thenounproject.com/png/2886259-200.png') no-repeat scroll 285px 10px;
+  background-size: 15px 15px;
+}
+
+#short-desc, #long-desc {
+  height: 96px;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+}
+
+.buttons-item {
+  height: 30px;
+  width: 146px;
+  background-color: @color_bg2;
+  border: 1px solid @color_border;
+  color: @color_font;
+  font-weight: bold;
+}
+
+.button-save {
+  background-color: @color_button_green;
+  color: @color_bg2;
+}
