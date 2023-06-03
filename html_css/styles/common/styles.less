@@ -5,13 +5,14 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Sofia", sans-serif;
+  font-size: 16px; /* base font size */
 }
 
 header {
-  height: 60px;
+  height: 4em;
   background-color: @color_bg2;
-  margin: 0px;
-  padding: 0px 10px 0px 10px;
+  margin: 0em;
+  padding: 0em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,28 +29,27 @@ input::placeholder {
   color: @color_font;
 }
 
-
 footer {
-  height: 70px;
+  height: 4em;
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   background-color: @color_bg2;
   text-align: center;
   color: @color_icons;
 }
 
 .search-input {
-  height: 40px;
-  width: 400px;
-  padding-left: 15px;
+  height: 3em;
+  width: 30em;
+  padding-left: 1em;
   border: 1px solid @color_border;
 }
 
-.search-button {
-  height: 40px;
-  width: 150px;
+.tags-select-button {
+  height: 3em;
+  width: 10em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,16 +70,16 @@ form {
 }
 
 .nav-btn-wrapper {
-  margin: 0px;
-  padding: 0px;
+  margin: 0em;
+  padding: 0em;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5em;
   font-weight: bold;
 }
 
 .nav-btn-lines {
-  gap: 4px;
+  gap: 0.3em;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -87,8 +87,8 @@ form {
 }
 
 .nav-btn-line {
-  height: 5px;
-  width: 40px;
+  height: 0.3em;
+  width: 2.3em;
   background-color: @color_border;
   list-style-type: none;
   border-radius: 2px;
@@ -100,12 +100,12 @@ form {
 
 .nav-wrapper {
   display: flex;
-  gap: 5px;
+  gap: 0.3em;
   align-items: center;
 }
 
 .nav-buttons {
-  height: 35px;
+  height: 2em;
   display: flex;
   align-items: stretch;
   align-content: center;
@@ -114,7 +114,7 @@ form {
 .nav-btn {
   border: 1px solid @color_bg2;
   background-color: @color_bg2;
-  padding: 5px;
+  padding: 0.3em;
   margin: 1px;
 
   &:hover {
@@ -124,7 +124,7 @@ form {
 }
 
 .nav-btn-login, .nav-btn-signup {
-  width: 63px;
+  width: 4.5em;
 }
 
 .material-symbols-outlined {
@@ -141,7 +141,7 @@ form {
 }
 
 .vertical-divider {
-  height: 15px;
+  height: 1em;
   width: 1px;
   background-color: @color_icons;
 }

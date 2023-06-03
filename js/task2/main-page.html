@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Register page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="main-page.less"/>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-btn-wrapper">
+    <ul class="nav-btn-lines">
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+      <li class="nav-btn-line"></li>
+    </ul>
+    Logo
+  </div>
+
+  <div class="search-wrapper">
+    <form>
+
+      <input id="search-input" class="search-input" type="search" name="search"
+             placeholder="Search by certificate name or description" oninput="searchData(this.value);"/>
+
+      <select class="tags-select-button" id="select-tag" onchange="filterByTagClick(this.value)">
+        <option value="">All tags</option>
+        <option value="1">Tag #1</option>
+        <option value="2">Tag #2</option>
+        <option value="3">Tag #3</option>
+        <option value="4">Tag #4</option>
+        <option value="5">Tag #5</option>
+      </select>
+
+    </form>
+  </div>
+
+  <div class="nav-wrapper">
+    <span class="nav-btn material-icons">favorite</span>
+    <span class="nav-btn material-icons">shopping_cart</span>
+    <div class="nav-buttons">
+      <button class="nav-btn nav-btn-login">Login</button>
+      <div class="vertical-divider-wrapper">
+        <div class="vertical-divider"></div>
+      </div>
+      <button class="nav-btn nav-btn-signup">Sign Up</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- Tags -->
+  <div id="tags" class="tags-wrapper"></div>
+
+  <!-- Certificates -->
+  <div id="certificates" class="items-wrapper"></div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="returnToLastScrollPosition()" id="myBtn2" title="go last">Last</button>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Copyright 2023. All rights reversed.</p>
+</footer>
+
+<script src="main-page.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,8 @@
 'use strict';
 
+const assert = require('assert');
+
+
 /**
  * You must return a date that comes in a predetermined number of seconds after 01.06.2020 00:00:002020
  * @param {number} seconds
@@ -21,14 +24,12 @@ console.log(secondsToDate(31536000));
 console.log(secondsToDate(0));
 console.log(secondsToDate(86400));
 
-/* test */
-const assert = require('assert');
-
 it('secondsToDate test', () => {
-  assert.deepEqual(secondsToDate(31536000), new Date('2021-06-01T00:00:00.202Z'));
-  assert.deepEqual(secondsToDate(0), new Date('2020-06-01T00:00:00.202Z'));
-  assert.deepEqual(secondsToDate(86400), new Date('2020-06-02T00:00:00.202Z'));
+    assert.deepEqual(secondsToDate(31536000), new Date('2021-06-01T00:00:00.202Z'));
+    assert.deepEqual(secondsToDate(0), new Date('2020-06-01T00:00:00.202Z'));
+    assert.deepEqual(secondsToDate(86400), new Date('2020-06-02T00:00:00.202Z'));
 });
+
 
 /**
  * You must create a function that returns a base 2 (binary) representation of a base 10 (decimal) string number
@@ -61,6 +62,12 @@ console.log('--- [toBase2Converter]');
 console.log(toBase2Converter(5));
 console.log(toBase2Converter(10));
 
+it('toBase2Converter test', () => {
+    assert.equal(toBase2Converter(5), 101);
+    assert.equal(toBase2Converter(10), 1010);
+});
+
+
 /**
  * You must create a function that takes two strings as arguments and returns the number of times the first string
  * is found in the text.
@@ -85,25 +92,39 @@ console.log(substringOccurrencesCounter('a', 'test it'));
 console.log(substringOccurrencesCounter('t', 'test it'));
 console.log(substringOccurrencesCounter('T', 'test it'));
 
+it('substringOccurrencesCounter test', () => {
+    assert.equal(substringOccurrencesCounter('a', 'test it'), 0);
+    assert.equal(substringOccurrencesCounter('t', 'test it'), 3);
+    assert.equal(substringOccurrencesCounter('T', 'test it'), 3);
+});
+
+
 function substringOccurrencesCounter2(substring, text) {
-  const lowerCaseSubstring = substring.toLowerCase();
-  const lowerCaseText = text.toLowerCase();
+    const lowerCaseSubstring = substring.toLowerCase();
+    const lowerCaseText = text.toLowerCase();
 
-  let count = 0;
-  let index = lowerCaseText.indexOf(lowerCaseSubstring);
+    let count = 0;
+    let index = lowerCaseText.indexOf(lowerCaseSubstring);
 
-  while (index !== -1) {
-    count++;
-    index = lowerCaseText.indexOf(lowerCaseSubstring, index + 1);
-  }
+    while (index !== -1) {
+        count++;
+        index = lowerCaseText.indexOf(lowerCaseSubstring, index + 1);
+    }
 
-  return count;
+    return count;
 }
 
-console.log('--- [toBase2Converter - init without regex]');
+console.log('--- [substringOccurrencesCounter2 - init without regex]');
 console.log(substringOccurrencesCounter2('a', 'test it'));
 console.log(substringOccurrencesCounter2('t', 'test it'));
 console.log(substringOccurrencesCounter2('T', 'test it'));
+
+it('substringOccurrencesCounter2 test', () => {
+    assert.equal(substringOccurrencesCounter2('a', 'test it'), 0);
+    assert.equal(substringOccurrencesCounter2('t', 'test it'), 3);
+    assert.equal(substringOccurrencesCounter2('T', 'test it'), 3);
+});
+
 
 /**
  * You must create a function that takes a string and returns a string in which each character is repeated once.
@@ -116,8 +137,24 @@ console.log(substringOccurrencesCounter2('T', 'test it'));
  *      "Hello world" -> "HHeello  wworrldd" // o, l is repeated more then once. Space was also repeated
  */
 function repeatingLitters(string) {
+    let result = '';
 
+    for (let i = 0; i < string.length; i++) {
+        result += string[i] + string[i];
+    }
+
+    return result;
 }
+
+console.log('--- [repeatingLitters]');
+console.log(repeatingLitters('Hello'));
+console.log(repeatingLitters('Hello world'));
+
+it('repeatingLitters test', () => {
+    assert.equal(repeatingLitters('Hello'), 'HHeelllloo');
+    assert.equal(repeatingLitters('Hello world'), 'HHeelllloo  wwoorrlldd');
+});
+
 
 /**
  * You must write a function redundant that takes in a string str and returns a function that returns str.
@@ -137,8 +174,25 @@ function repeatingLitters(string) {
  *      f3() ➞ ""
  */
 function redundant(str) {
-
+    return function () {
+        return str;
+    };
 }
+
+console.log('--- [redundant]');
+const f1 = redundant('apple')
+console.log(f1())
+const f2 = redundant('pear')
+console.log(f2())
+const f3 = redundant('')
+console.log(f3())
+
+it('redundant test', () => {
+    assert.equal(redundant('apple')(), 'apple');
+    assert.equal(redundant('pear')(), 'pear');
+    assert.equal(redundant('')(), '');
+});
+
 
 /**
  * https://en.wikipedia.org/wiki/Tower_of_Hanoi
@@ -147,8 +201,27 @@ function redundant(str) {
  * @return {number}
  */
 function towerHanoi(disks) {
-
+    return Math.pow(2, disks) - 1;
 }
+
+/**
+ * The towerHanoi function takes the number of disks as an input (disks) and returns the minimum number of moves
+ * required to solve the Tower of Hanoi puzzle with that number of disks.
+ * The formula to calculate the minimum number of moves for Tower of Hanoi is 2^n - 1, where n is the number of disks.
+ * This formula represents the optimal solution for the puzzle.
+ */
+
+console.log('--- [towerHanoi]');
+console.log(towerHanoi(3));
+console.log(towerHanoi(4));
+console.log(towerHanoi(5));
+
+it('towerHanoi test', () => {
+    assert.equal(towerHanoi(3), 7);
+    assert.equal(towerHanoi(4), 15);
+    assert.equal(towerHanoi(5), 31);
+});
+
 
 /**
  * You must create a function that multiplies two matricies (n x n each).
@@ -159,8 +232,33 @@ function towerHanoi(disks) {
  *
  */
 function matrixMultiplication(matrix1, matrix2) {
+    const n = matrix1.length;
+    const result = [];
 
+    for (let i = 0; i < n; i++) {
+        result[i] = [];
+        for (let j = 0; j < n; j++) {
+            result[i][j] = 0;
+            for (let k = 0; k < n; k++) {
+                result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+
+    return result;
 }
+
+const matrix1 = [[1, 2], [3, 4]];
+const matrix2 = [[5, 6], [7, 8]];
+
+const result = matrixMultiplication(matrix1, matrix2);
+console.log('--- [matrixMultiplication]');
+console.log(result); // Output: [ [ 19, 22 ], [ 43, 50 ] ]
+
+it('matrixMultiplication test', () => {
+    assert.deepEqual(matrixMultiplication([[1, 2], [3, 4]], [[5, 6], [7, 8]]), [ [ 19, 22 ], [ 43, 50 ] ]);
+});
+
 
 /**
  * Create a gather function that accepts a string argument and returns another function.
@@ -170,7 +268,7 @@ function matrixMultiplication(matrix1, matrix2) {
  * get should return all of the arguments provided to the gather functions as a string in the order specified in the order functions.
  *
  * @param {string} str
- * @return {string}
+ * @return {any}
  *
  * @example
  *      gather("a")("b")("c").order(0)(1)(2).get() ➞ "abc"
@@ -178,5 +276,36 @@ function matrixMultiplication(matrix1, matrix2) {
  *      gather("e")("l")("o")("l")("!")("h").order(5)(0)(1)(3)(2)(4).get()  ➞ "hello"
  */
 function gather(str) {
+    let gatheredCollection = new Array(str);
+    let orderCollection = [];
 
+    function innerFunction(nextValue) {
+        if (orderCollection.length) {
+            orderCollection.push(nextValue);
+        } else {
+            gatheredCollection.push(nextValue);
+        }
+        return innerFunction;
+    }
+
+    innerFunction.order = function (indices) {
+        orderCollection.push(indices);
+        return innerFunction;
+    };
+
+    innerFunction.get = function () {
+        return orderCollection.map((ind) => gatheredCollection[ind]).join('');
+    };
+
+    return innerFunction;
 }
+
+console.log(gather('a')('b')('c').order(0)(1)(2).get());
+console.log(gather('a')('b')('c').order(2)(1)(0).get());
+console.log(gather('e')('l')('o')('l')('!')('h').order(5)(0)(1)(3)(2)(4).get());
+
+it('gather test', () => {
+    assert.equal(gather('a')('b')('c').order(0)(1)(2).get(), 'abc');
+    assert.equal(gather('a')('b')('c').order(2)(1)(0).get(), 'cba');
+    assert.equal(gather('e')('l')('o')('l')('!')('h').order(5)(0)(1)(3)(2)(4).get(), 'hello!');
+});
