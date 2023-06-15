@@ -287,7 +287,7 @@ function gather(str) {
         }
         return innerFunction;
     }
-
+f
     innerFunction.order = function (indices) {
         orderCollection.push(indices);
         return innerFunction;
